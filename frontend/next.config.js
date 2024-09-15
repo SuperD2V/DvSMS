@@ -1,5 +1,6 @@
 //@ts-check
-
+const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin');
+const withVanillaExtract = createVanillaExtractPlugin();
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { composePlugins, withNx } = require('@nx/next');
 
@@ -19,4 +20,4 @@ const plugins = [
   withNx,
 ];
 
-module.exports = composePlugins(...plugins)(nextConfig);
+module.exports = composePlugins(...plugins)(withVanillaExtract(nextConfig));
