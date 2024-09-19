@@ -2,7 +2,12 @@
   "name": "org",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build:fe": "nx build frontend",
+    "serve:fe": "nx serve frontend",
+    "start:fe": "nx serve frontend",
+    "test:fe": "nx test frontend"
+  },
   "private": true,
   "devDependencies": {
     "@nrwl/next": "^19.7.3",
